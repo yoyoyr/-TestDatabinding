@@ -19,6 +19,12 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <Button
+            android:text="bind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bind"/>
+
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
@@ -35,23 +41,23 @@
             android:text="changeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/changeAge"
-            android:text="changeAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <!--<Button-->
+            <!--android:id="@+id/changeAge"-->
+            <!--android:text="changeAge"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
 
-        <EditText
-            android:id="@+id/doubleChangeData"
-            android:text="@={userInfo.doubleChangeData}"
-            app:url="@{userInfo.doubleChangeData}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <!--<EditText-->
+            <!--android:id="@+id/doubleChangeData"-->
+            <!--android:text="@={userInfo.doubleChangeData}"-->
+            <!--app:url="@{userInfo.doubleChangeData}"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
 
-        <Button
-            android:id="@+id/doubleTv"
-            android:text="@{userInfo.doubleChangeData}"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+        <!--<Button-->
+            <!--android:id="@+id/doubleTv"-->
+            <!--android:text="@{userInfo.doubleChangeData}"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"/>-->
     </LinearLayout>
 </layout>

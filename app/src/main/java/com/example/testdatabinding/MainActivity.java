@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -19,18 +20,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
-        user = new User();
-        user.setUserName("yoyo");
-        user.setUserAge("123");
-        activityMainBinding.setUserInfo(user);
-//        activityMainBinding.age;
-
-        activityMainBinding.changeAge.setOnClickListener(new View.OnClickListener() {
+        ((Button)findViewById(R.id.bind)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                user.setUserAge("456");
+                user = new User();
+                user.setUserName("yoyo");
+                user.setUserAge("123");
+                activityMainBinding.setUserInfo(user);
             }
         });
+//        activityMainBinding.age;
+//
+//        activityMainBinding.changeAge.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                user.setUserAge("456");
+//            }
+//        });
 
         activityMainBinding.changeName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @BindingAdapter({"url"})
-    public static void onEditTextChange(TextView editText, String text){
-        Log.d("main","edit text change = "+text);
-    }
+//    @BindingAdapter({"url"})
+//    public static void onEditTextChange(TextView editText, String text){
+//        Log.d("main","edit text change = "+text);
+//    }
 
 
 }
